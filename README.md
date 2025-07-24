@@ -105,6 +105,12 @@ python app.py
 
 The application will be available at `http://localhost:3000`
 
+## Demo Credentials
+
+For testing purposes, you can use the following demo credentials:
+- **Admin**: username=`admin`, password=`adminpass` 
+- **User**: username=`user`, password=`userpass`
+
 ## Development
 
 ### Available Scripts

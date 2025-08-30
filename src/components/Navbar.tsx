@@ -27,6 +27,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import DescriptionIcon from '@mui/icons-material/Description';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 
@@ -62,6 +63,7 @@ const Navbar: React.FC = () => {
     { label: 'Dashboard', path: '/dashboard', icon: <DashboardIcon />, requireAuth: true },
     { label: 'Claims', path: '/claims', icon: <DescriptionIcon />, requireAuth: true },
     { label: 'Submit Claim', path: '/submit-claim', icon: <AddCircleIcon />, requireAuth: true },
+    { label: 'Workflow Generator', path: '/workflow-generator', icon: <AccountTreeIcon />, requireAuth: true },
     { label: 'Admin', path: '/admin', icon: <AdminPanelSettingsIcon />, requireAdmin: true }
   ];
 

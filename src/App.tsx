@@ -9,6 +9,7 @@ import ClaimForm from './components/ClaimForm';
 import ClaimDetails from './pages/ClaimDetails';
 import Login from './pages/Login';
 import AdminPage from './pages/AdminPage';
+import ClaimEcosystemWorkflowGenerator from './components/ClaimEcosystemWorkflowGenerator';
 import Navbar from './components/Navbar';
 import Notifications from './components/Notifications';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
@@ -38,6 +39,7 @@ const AppContent: React.FC = () => {
           <Route path="/claims" element={<ProtectedRoute><ClaimsList /></ProtectedRoute>} />
           <Route path="/claims/:id" element={<ProtectedRoute><ClaimDetails /></ProtectedRoute>} />
           <Route path="/submit-claim" element={<ProtectedRoute><ClaimForm /></ProtectedRoute>} />
+          <Route path="/workflow-generator" element={<ProtectedRoute><ClaimEcosystemWorkflowGenerator /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminRoute><AdminPage /></AdminRoute>} />
         </Routes>
       </Container>

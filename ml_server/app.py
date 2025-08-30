@@ -68,10 +68,13 @@ valid_categories = {
 }
 
 # Load trained model, scaler, and feature names
+import os
 try:
-    model = joblib.load('ml_server/fraud_detection_model.pkl')
-    scaler = joblib.load('ml_server/scaler.pkl')
-    feature_names = joblib.load('ml_server/feature_names.pkl')
+    # Use relative paths when running from ml_server directory, absolute when running from root
+    base_path = '' if os.path.exists('fraud_detection_model.pkl') else 'ml_server/'
+    model = joblib.load(f'{base_path}fraud_detection_model.pkl')
+    scaler = joblib.load(f'{base_path}scaler.pkl')
+    feature_names = joblib.load(f'{base_path}feature_names.pkl')
     logger.info("Model components loaded successfully")
 except Exception as e:
     logger.error(f"Error loading model components: {str(e)}")
